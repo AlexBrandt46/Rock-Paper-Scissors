@@ -16,5 +16,22 @@ namespace Rock_Paper_Scissors
         {
             InitializeComponent();
         }
+
+        //Purpose: confirms whether or not the user would like to close the application
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result; //the user result from the message box
+
+            result = MessageBox.Show("Would you like to close the game?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (result == DialogResult.Yes)
+            {
+
+                this.Close();
+
+            }
+
+        }
     }
 }

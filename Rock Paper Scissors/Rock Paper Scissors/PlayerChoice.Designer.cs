@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnRock = new System.Windows.Forms.RadioButton();
-            this.btnPaper = new System.Windows.Forms.RadioButton();
             this.btnScissors = new System.Windows.Forms.RadioButton();
+            this.btnPaper = new System.Windows.Forms.RadioButton();
+            this.btnRock = new System.Windows.Forms.RadioButton();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,26 +47,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Choice:";
-            // 
-            // btnRock
-            // 
-            this.btnRock.AutoSize = true;
-            this.btnRock.Location = new System.Drawing.Point(7, 20);
-            this.btnRock.Name = "btnRock";
-            this.btnRock.Size = new System.Drawing.Size(14, 13);
-            this.btnRock.TabIndex = 0;
-            this.btnRock.TabStop = true;
-            this.btnRock.UseVisualStyleBackColor = true;
-            // 
-            // btnPaper
-            // 
-            this.btnPaper.AutoSize = true;
-            this.btnPaper.Location = new System.Drawing.Point(6, 93);
-            this.btnPaper.Name = "btnPaper";
-            this.btnPaper.Size = new System.Drawing.Size(14, 13);
-            this.btnPaper.TabIndex = 1;
-            this.btnPaper.TabStop = true;
-            this.btnPaper.UseVisualStyleBackColor = true;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnScissors
             // 
@@ -77,11 +59,41 @@
             this.btnScissors.TabStop = true;
             this.btnScissors.UseVisualStyleBackColor = true;
             // 
+            // btnPaper
+            // 
+            this.btnPaper.AutoSize = true;
+            this.btnPaper.Location = new System.Drawing.Point(6, 93);
+            this.btnPaper.Name = "btnPaper";
+            this.btnPaper.Size = new System.Drawing.Size(14, 13);
+            this.btnPaper.TabIndex = 1;
+            this.btnPaper.TabStop = true;
+            this.btnPaper.UseVisualStyleBackColor = true;
+            // 
+            // btnRock
+            // 
+            this.btnRock.AutoSize = true;
+            this.btnRock.Location = new System.Drawing.Point(7, 20);
+            this.btnRock.Name = "btnRock";
+            this.btnRock.Size = new System.Drawing.Size(14, 13);
+            this.btnRock.TabIndex = 0;
+            this.btnRock.TabStop = true;
+            this.btnRock.UseVisualStyleBackColor = true;
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.Location = new System.Drawing.Point(20, 277);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(185, 59);
+            this.btnContinue.TabIndex = 1;
+            this.btnContinue.Text = "Continue";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            // 
             // PlayerChoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(219, 386);
+            this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -100,5 +112,6 @@
         private System.Windows.Forms.RadioButton btnScissors;
         private System.Windows.Forms.RadioButton btnPaper;
         private System.Windows.Forms.RadioButton btnRock;
+        private System.Windows.Forms.Button btnContinue;
     }
 }

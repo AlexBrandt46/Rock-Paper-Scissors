@@ -12,9 +12,14 @@ namespace Rock_Paper_Scissors
 {
     public partial class PlayerChoice : Form
     {
-        public PlayerChoice()
+        public PlayerChoice(Player playerOne, Player playerTwo)
         {
             InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

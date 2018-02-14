@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rock_Paper_Scissors
 {
-    class Player
+    public class Player
     {
 
         private int playerNumber; //determines whether player is Player 1 or Player 2

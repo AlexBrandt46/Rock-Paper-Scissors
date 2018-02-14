@@ -9,8 +9,8 @@ namespace Rock_Paper_Scissors
     class Player
     {
 
-        private int playerNumber;
-        public enum Choice
+        private int playerNumber; //determines whether player is Player 1 or Player 2
+        public enum Choice //player's choice
         {
             ROCK,
             PAPER,
@@ -24,12 +24,14 @@ namespace Rock_Paper_Scissors
 
         }
 
+        //Purpose: return the player's number
         public int PlayerNumber {
             get {
                 return playerNumber;
             }
         }
 
+        //Purpose: gets and sets the player's choice
         public Choice PlayerChoice {
             get;
             set;

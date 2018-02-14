@@ -33,5 +33,20 @@ namespace Rock_Paper_Scissors
             }
 
         }
+
+        private void btnSinglePlayer_Click(object sender, EventArgs e)
+        {
+
+            Player playerOne = new Player(1);
+
+        }
+
+        private void btnTwoPlayer_Click(object sender, EventArgs e)
+        {
+
+            Player playerOne = new Player(1);
+            Player playerTwo = new Player(2);
+
+        }
     }
 }

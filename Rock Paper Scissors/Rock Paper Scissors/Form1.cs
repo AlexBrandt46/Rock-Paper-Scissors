@@ -38,6 +38,7 @@ namespace Rock_Paper_Scissors
         {
 
             Player playerOne = new Player(1);
+            Player computer = new Player(2);
 
         }
 

@@ -12,7 +12,7 @@ namespace Rock_Paper_Scissors
 {
     public partial class PlayerChoice : Form
     {
-        public PlayerChoice(Player playerOne, Player playerTwo)
+        public PlayerChoice(Player playerOne)
         {
             InitializeComponent();
         }

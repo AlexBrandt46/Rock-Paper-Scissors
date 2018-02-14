@@ -32,9 +32,9 @@
             this.btnTwoPlayer = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.grpBestOf = new System.Windows.Forms.GroupBox();
+            this.btn7Games = new System.Windows.Forms.RadioButton();
+            this.btn5Games = new System.Windows.Forms.RadioButton();
             this.btn3Games = new System.Windows.Forms.RadioButton();
-            this.btn5 = new System.Windows.Forms.RadioButton();
-            this.btn7 = new System.Windows.Forms.RadioButton();
             this.grpBestOf.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,7 @@
             this.btnSinglePlayer.TabIndex = 0;
             this.btnSinglePlayer.Text = "1 Player\r\nPlay Against a Computer-Controlled Bot\r\n";
             this.btnSinglePlayer.UseVisualStyleBackColor = true;
+            this.btnSinglePlayer.Click += new System.EventHandler(this.btnSinglePlayer_Click);
             // 
             // btnTwoPlayer
             // 
@@ -57,6 +58,7 @@
             this.btnTwoPlayer.TabIndex = 1;
             this.btnTwoPlayer.Text = "2 Player\r\nPlay Against Another Human\r\n";
             this.btnTwoPlayer.UseVisualStyleBackColor = true;
+            this.btnTwoPlayer.Click += new System.EventHandler(this.btnTwoPlayer_Click);
             // 
             // btnExit
             // 
@@ -70,8 +72,8 @@
             // 
             // grpBestOf
             // 
-            this.grpBestOf.Controls.Add(this.btn7);
-            this.grpBestOf.Controls.Add(this.btn5);
+            this.grpBestOf.Controls.Add(this.btn7Games);
+            this.grpBestOf.Controls.Add(this.btn5Games);
             this.grpBestOf.Controls.Add(this.btn3Games);
             this.grpBestOf.Location = new System.Drawing.Point(14, 138);
             this.grpBestOf.Name = "grpBestOf";
@@ -80,9 +82,30 @@
             this.grpBestOf.TabStop = false;
             this.grpBestOf.Text = "Best Of:";
             // 
+            // btn7Games
+            // 
+            this.btn7Games.AutoSize = true;
+            this.btn7Games.Location = new System.Drawing.Point(153, 19);
+            this.btn7Games.Name = "btn7Games";
+            this.btn7Games.Size = new System.Drawing.Size(31, 17);
+            this.btn7Games.TabIndex = 2;
+            this.btn7Games.Text = "7";
+            this.btn7Games.UseVisualStyleBackColor = true;
+            // 
+            // btn5Games
+            // 
+            this.btn5Games.AutoSize = true;
+            this.btn5Games.Location = new System.Drawing.Point(86, 19);
+            this.btn5Games.Name = "btn5Games";
+            this.btn5Games.Size = new System.Drawing.Size(31, 17);
+            this.btn5Games.TabIndex = 1;
+            this.btn5Games.Text = "5";
+            this.btn5Games.UseVisualStyleBackColor = true;
+            // 
             // btn3Games
             // 
             this.btn3Games.AutoSize = true;
+            this.btn3Games.Checked = true;
             this.btn3Games.Location = new System.Drawing.Point(26, 19);
             this.btn3Games.Name = "btn3Games";
             this.btn3Games.Size = new System.Drawing.Size(31, 17);
@@ -90,28 +113,6 @@
             this.btn3Games.TabStop = true;
             this.btn3Games.Text = "3";
             this.btn3Games.UseVisualStyleBackColor = true;
-            // 
-            // btn5
-            // 
-            this.btn5.AutoSize = true;
-            this.btn5.Location = new System.Drawing.Point(86, 19);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(31, 17);
-            this.btn5.TabIndex = 1;
-            this.btn5.TabStop = true;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
-            // 
-            // btn7
-            // 
-            this.btn7.AutoSize = true;
-            this.btn7.Location = new System.Drawing.Point(153, 19);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(31, 17);
-            this.btn7.TabIndex = 2;
-            this.btn7.TabStop = true;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
             // 
             // frmLaunch
             // 
@@ -141,8 +142,8 @@
         private System.Windows.Forms.Button btnTwoPlayer;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox grpBestOf;
-        private System.Windows.Forms.RadioButton btn7;
-        private System.Windows.Forms.RadioButton btn5;
+        private System.Windows.Forms.RadioButton btn7Games;
+        private System.Windows.Forms.RadioButton btn5Games;
         private System.Windows.Forms.RadioButton btn3Games;
     }
 }

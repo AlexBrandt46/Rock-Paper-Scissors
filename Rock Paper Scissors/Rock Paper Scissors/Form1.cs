@@ -12,6 +12,7 @@ namespace Rock_Paper_Scissors
 {
     public partial class frmLaunch : Form
     {
+
         public frmLaunch()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Rock_Paper_Scissors
         private void btnSinglePlayer_Click(object sender, EventArgs e)
         {
 
-            Player playerOne = new Player(1);
+            Player playerOne = new Player(1, GetRounds());
             Player computer = new Player(2);
 
         }
@@ -45,9 +46,31 @@ namespace Rock_Paper_Scissors
         private void btnTwoPlayer_Click(object sender, EventArgs e)
         {
 
-            Player playerOne = new Player(1);
+            Player playerOne = new Player(1, GetRounds());
             Player playerTwo = new Player(2);
 
         }
+
+        private int GetRounds()
+        {
+            int rounds;
+
+            if (btn3Games.Checked)
+            {
+                rounds = 3;
+            }
+            else if (btn5Games.Checked)
+            {
+                rounds = 5;
+            }
+            else
+            {
+                rounds = 7;
+            }
+
+            return rounds;
+
+        }
+
     }
 }

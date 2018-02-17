@@ -41,6 +41,10 @@ namespace Rock_Paper_Scissors
             Player playerOne = new Player(1, GetRounds());
             Player computer = new Player(2);
 
+            PlayerChoice playerChoice = new PlayerChoice(playerOne);
+
+            playerChoice.Show();
+
         }
 
         private void btnTwoPlayer_Click(object sender, EventArgs e)
@@ -55,9 +59,9 @@ namespace Rock_Paper_Scissors
         {
             int rounds;
 
-            if (btn3Games.Checked)
+            if (btn7Games.Checked)
             {
-                rounds = 3;
+                rounds = 7;
             }
             else if (btn5Games.Checked)
             {
@@ -65,7 +69,7 @@ namespace Rock_Paper_Scissors
             }
             else
             {
-                rounds = 7;
+                rounds = 3;
             }
 
             return rounds;

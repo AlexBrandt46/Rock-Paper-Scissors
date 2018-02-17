@@ -63,7 +63,7 @@ namespace Rock_Paper_Scissors
 
             if (next.Computer || current.PlayerNumber == 2)
             {
-
+                Results result = new Results();
             } 
             else
             {

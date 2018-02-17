@@ -11,8 +11,9 @@ namespace Rock_Paper_Scissors
 
         private int playerNumber; //determines whether player is Player 1 or Player 2
         private bool winner; //whether or not the player is the winner of the round
-        private static int rounds; //the amount of rounds to play
-        public static Choice[] choices;
+        private int rounds; //the amount of rounds to play
+        private bool computer; //whether or not this instance of player is computer
+        public static Choice[] choices = new Choice[2]; //each player's choices
 
         public enum Choice //player's choice
         {
@@ -21,21 +22,22 @@ namespace Rock_Paper_Scissors
             SCISSORS
         }
 
-        public Player(int num, int roundAmount)
+        public Player(int num, bool isComputer, int roundAmount)
         {
 
             playerNumber = num;
             winner = false;
             rounds = roundAmount;
-            choices = new Choice[2];
+            computer = isComputer;
 
         }
 
-        public Player(int num)
+        public Player(int num, bool isComputer)
         {
 
             playerNumber = num;
             winner = false;
+            computer = isComputer;
 
         }
 
@@ -61,5 +63,10 @@ namespace Rock_Paper_Scissors
             }
         }
 
+        public bool Computer {
+            get {
+                return computer;
+            }
+        }
     }
 }

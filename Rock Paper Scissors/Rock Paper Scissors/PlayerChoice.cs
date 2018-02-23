@@ -50,18 +50,18 @@ namespace Rock_Paper_Scissors
             
             if (btnScissors.Checked)
             {
-                Player.choices[current.PlayerNumber - 1] = Player.Choice.SCISSORS;
+                PlayerVariables.choices[current.PlayerNumber - 1] = Player.Choice.SCISSORS;
             }
             else if (btnPaper.Checked)
             {
-                Player.choices[current.PlayerNumber - 1] = Player.Choice.PAPER;
+                PlayerVariables.choices[current.PlayerNumber - 1] = Player.Choice.PAPER;
             }
             else
             {
-                Player.choices[current.PlayerNumber - 1] = Player.Choice.ROCK;
+                PlayerVariables.choices[current.PlayerNumber - 1] = Player.Choice.ROCK;
             }
 
-            if (next.Computer || current.PlayerNumber == 2)
+            if (next.IsComputer || current.PlayerNumber == 2)
             {
                 Results result = new Results();
             } 

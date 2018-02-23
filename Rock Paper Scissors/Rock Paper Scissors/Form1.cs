@@ -38,8 +38,10 @@ namespace Rock_Paper_Scissors
         private void btnSinglePlayer_Click(object sender, EventArgs e)
         {
 
-            Player playerOne = new Player(1, this.Rounds);
-            Player computer = new Player(2);
+            this.Rounds = Rounds;
+
+            Player playerOne = new Player(1, false);
+            Player computer = new Player(2, true);
 
             PlayerChoice playerChoice = new PlayerChoice(playerOne, computer);
 
@@ -50,8 +52,10 @@ namespace Rock_Paper_Scissors
         private void btnTwoPlayer_Click(object sender, EventArgs e)
         {
 
-            Player playerOne = new Player(1, this.Rounds);
-            Player playerTwo = new Player(2);
+            this.Rounds = Rounds;
+
+            Player playerOne = new Player(1, false);
+            Player playerTwo = new Player(2, false);
 
             PlayerChoice playerChoice = new PlayerChoice(playerOne, playerTwo);
 
@@ -59,17 +63,20 @@ namespace Rock_Paper_Scissors
 
         public int Rounds {
             get {
+                return PlayerVariables.rounds;
+            }
+            set {
                 if (btn7Games.Checked)
                 {
-                    return 7;
+                    PlayerVariables.rounds = 7;
                 }
                 else if (btn5Games.Checked)
                 {
-                    return 5;
+                    PlayerVariables.rounds = 5;
                 }
                 else
                 {
-                    return 3;
+                    PlayerVariables.rounds = 3;
                 }
             }
         }

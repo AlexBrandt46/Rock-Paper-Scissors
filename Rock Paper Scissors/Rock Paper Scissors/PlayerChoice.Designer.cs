@@ -52,7 +52,7 @@
             // btnScissors
             // 
             this.btnScissors.AutoSize = true;
-            this.btnScissors.Location = new System.Drawing.Point(6, 180);
+            this.btnScissors.Location = new System.Drawing.Point(6, 153);
             this.btnScissors.Name = "btnScissors";
             this.btnScissors.Size = new System.Drawing.Size(14, 13);
             this.btnScissors.TabIndex = 2;
@@ -62,7 +62,7 @@
             // btnPaper
             // 
             this.btnPaper.AutoSize = true;
-            this.btnPaper.Location = new System.Drawing.Point(6, 93);
+            this.btnPaper.Location = new System.Drawing.Point(7, 84);
             this.btnPaper.Name = "btnPaper";
             this.btnPaper.Size = new System.Drawing.Size(14, 13);
             this.btnPaper.TabIndex = 1;

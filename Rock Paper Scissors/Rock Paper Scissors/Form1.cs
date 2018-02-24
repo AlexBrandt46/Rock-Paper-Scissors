@@ -45,6 +45,8 @@ namespace Rock_Paper_Scissors
 
             PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
 
+            this.Hide();
+
             playerChoice.Show();
 
         }
@@ -58,6 +60,10 @@ namespace Rock_Paper_Scissors
             PlayerVariables.playerTwo = new Player(2, false);
 
             PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
+
+            this.Hide();
+
+            playerChoice.Show();
 
         }
 

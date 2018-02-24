@@ -25,7 +25,7 @@ namespace Rock_Paper_Scissors
         private void CheckWin()
         {
 
-            if (PlayerVariables.playerOne.PlayerChoice == Player.Choice.ROCK && Pl)
+            
 
         }
 

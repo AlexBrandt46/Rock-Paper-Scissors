@@ -38,12 +38,12 @@ namespace Rock_Paper_Scissors
         private void btnSinglePlayer_Click(object sender, EventArgs e)
         {
 
-            this.Rounds = Rounds;
+            PlayerVariables.rounds = Rounds;
 
-            Player playerOne = new Player(1, false);
-            Player computer = new Player(2, true);
+            PlayerVariables.playerOne = new Player(1, false);
+            PlayerVariables.playerTwo = new Player(2, true);
 
-            PlayerChoice playerChoice = new PlayerChoice(playerOne, computer);
+            PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
 
             playerChoice.Show();
 
@@ -52,12 +52,12 @@ namespace Rock_Paper_Scissors
         private void btnTwoPlayer_Click(object sender, EventArgs e)
         {
 
-            this.Rounds = Rounds;
+            PlayerVariables.rounds = Rounds;
 
-            Player playerOne = new Player(1, false);
-            Player playerTwo = new Player(2, false);
+            PlayerVariables.playerOne = new Player(1, false);
+            PlayerVariables.playerTwo = new Player(2, false);
 
-            PlayerChoice playerChoice = new PlayerChoice(playerOne, playerTwo);
+            PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
 
         }
 

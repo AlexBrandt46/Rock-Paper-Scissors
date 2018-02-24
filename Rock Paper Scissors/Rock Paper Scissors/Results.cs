@@ -16,5 +16,18 @@ namespace Rock_Paper_Scissors
         {
             InitializeComponent();
         }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckWin()
+        {
+
+            if (PlayerVariables.playerOne.PlayerChoice == Player.Choice.ROCK && Pl)
+
+        }
+
     }
 }

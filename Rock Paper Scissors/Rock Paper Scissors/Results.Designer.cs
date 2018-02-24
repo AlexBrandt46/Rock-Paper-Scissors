@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPlayer2Score = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxPlayerOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxPlayerTwo)).BeginInit();
             this.SuspendLayout();
@@ -116,11 +117,22 @@
             this.lblPlayer2Score.Size = new System.Drawing.Size(0, 54);
             this.lblPlayer2Score.TabIndex = 7;
             // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(172, 318);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(150, 47);
+            this.btnNext.TabIndex = 8;
+            this.btnNext.Text = "Next Round";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 377);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblPlayer2Score);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -148,5 +160,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPlayer2Score;
+        private System.Windows.Forms.Button btnNext;
     }
 }

@@ -9,11 +9,12 @@ namespace Rock_Paper_Scissors
     class PlayerVariables
     {
 
+        public static int currentRound = 1; //current round
         public static int rounds; //maximum amount of rounds that can be played
         public static int playerOneScore = 0;
         public static int playerTwoScore = 0;
-        public static Player.Choice[] choices = new Player.Choice[2]; //each player's choices
-
+        public static Player playerOne;
+        public static Player playerTwo;
 
     }
 }

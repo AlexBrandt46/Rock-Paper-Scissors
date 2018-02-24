@@ -14,29 +14,14 @@ namespace Rock_Paper_Scissors
     public partial class PlayerChoice : Form
     {
 
-        Player current;
-        Player next;
-
-        public PlayerChoice(Player playerOne, Player playerTwo)
-        {
-
-            InitializeComponent();
-
-            current = playerOne;
-            next = playerTwo;
-
-            this.Text = "Player " + current.PlayerNumber + " Choice";
-
-        }
+        private Player current;
 
         public PlayerChoice(Player player)
         {
 
-            InitializeComponent();
-
             current = player;
 
-            this.Text = "Player " + current.PlayerNumber + " Choice";
+            InitializeComponent();
 
         }
 
@@ -50,25 +35,25 @@ namespace Rock_Paper_Scissors
             
             if (btnScissors.Checked)
             {
-                PlayerVariables.choices[current.PlayerNumber - 1] = Player.Choice.SCISSORS;
+                current.PlayerChoice = Player.Choice.SCISSORS;
             }
             else if (btnPaper.Checked)
             {
-                PlayerVariables.choices[current.PlayerNumber - 1] = Player.Choice.PAPER;
+                current.PlayerChoice = Player.Choice.PAPER;
             }
             else
             {
-                PlayerVariables.choices[current.PlayerNumber - 1] = Player.Choice.ROCK;
+                current.PlayerChoice = Player.Choice.ROCK;
             }
 
-            if (next.IsComputer || current.PlayerNumber == 2)
+            if (current.IsComputer || current.PlayerNumber == 2)
             {
                 Results result = new Results();
             } 
             else
             {
 
-                PlayerChoice playerChoice = new PlayerChoice(next);
+                PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerTwo);
 
                 playerChoice.Show();
 

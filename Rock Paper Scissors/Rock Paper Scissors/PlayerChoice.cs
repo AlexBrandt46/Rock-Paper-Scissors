@@ -23,6 +23,8 @@ namespace Rock_Paper_Scissors
 
             InitializeComponent();
 
+            this.Text = "Player " + current.PlayerNumber.ToString() + " Choice"; //changes text to say current player number
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace Rock_Paper_Scissors
 
                 this.Close(); //closes the player choice window for the current player
 
-                result.Show();
+                result.Show(); //show the results for the round
 
             } 
             else
@@ -73,7 +75,7 @@ namespace Rock_Paper_Scissors
 
                 this.Close(); //closes the PlayerChoice window for the current player
 
-                playerChoice.Show();
+                playerChoice.Show(); //show the PlayerChoice window for player 2
 
             }
 

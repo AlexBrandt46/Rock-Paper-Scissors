@@ -46,14 +46,32 @@ namespace Rock_Paper_Scissors
                 current.PlayerChoice = Player.Choice.ROCK;
             }
 
-            if (current.IsComputer || current.PlayerNumber == 2)
+            if (PlayerVariables.playerTwo.IsComputer || current.PlayerNumber == 2)
             {
-                Results result = new Results();
+
+                //picks a random choice for the computer if playerTwo is a computer
+                if(PlayerVariables.playerTwo.IsComputer)
+                {
+
+                    Random rnd = new Random(); //used to generate the index of the value in Player.Choice that the computer will use this round
+
+                    PlayerVariables.playerTwo.PlayerChoice = ((Player.Choice)rnd.Next(0, 3));
+
+                }
+
+                Results result = new Results(); //creates a form to show the results of the round 
+
+                this.Close(); //closes the player choice window for the current player
+
+                result.Show();
+
             } 
             else
             {
 
                 PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerTwo);
+
+                this.Close(); //closes the PlayerChoice window for the current player
 
                 playerChoice.Show();
 

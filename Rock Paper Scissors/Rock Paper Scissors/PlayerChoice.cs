@@ -63,9 +63,24 @@ namespace Rock_Paper_Scissors
 
                 Results result = new Results(); //creates a form to show the results of the round 
 
+                result.CheckWin();
+
                 this.Close(); //closes the player choice window for the current player
 
-                result.Show(); //show the results for the round
+                if ((Convert.ToDouble(PlayerVariables.playerOneScore)) / PlayerVariables.rounds > .5 || (Convert.ToDouble(PlayerVariables.playerTwoScore)) / PlayerVariables.rounds > .5)
+                {
+
+                    WinPage win = new WinPage();
+
+                    win.Show();
+
+                }
+                else
+                {
+
+                    result.Show();
+
+                }
 
             } 
             else

@@ -15,11 +15,7 @@ namespace Rock_Paper_Scissors
         public Results()
         {
 
-            InitializeComponent();
-
-            CheckWin();
-
-            
+            InitializeComponent(); 
 
         }
 
@@ -37,7 +33,7 @@ namespace Rock_Paper_Scissors
         }
 
         //Purpose: check which player one based on the simple rules of rock, paper, scissors
-        private void CheckWin()
+        public void CheckWin()
         {
 
             PlayerVariables.playerOne.Winner = false;
@@ -112,15 +108,6 @@ namespace Rock_Paper_Scissors
             lblPlayer2Score.Text = PlayerVariables.playerTwoScore.ToString();
 
             lblRoundCount.Text = PlayerVariables.currentRound.ToString() + "/" + PlayerVariables.rounds.ToString();
-
-            if ((Convert.ToDouble(PlayerVariables.playerOneScore)) / PlayerVariables.rounds > .5 || (Convert.ToDouble(PlayerVariables.playerTwoScore) + 1.0) / PlayerVariables.rounds > .5)
-            {
-
-                WinPage win = new WinPage();
-
-                win.Show();
-
-            }
 
         }
 

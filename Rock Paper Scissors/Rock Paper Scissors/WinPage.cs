@@ -14,7 +14,9 @@ namespace Rock_Paper_Scissors
     {
         public WinPage()
         {
+
             InitializeComponent();
+
         }
     }
 }

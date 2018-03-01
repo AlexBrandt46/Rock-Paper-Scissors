@@ -32,14 +32,11 @@
             this.lblPlayerTwo = new System.Windows.Forms.Label();
             this.pcboxPlayerOne = new System.Windows.Forms.PictureBox();
             this.pcBoxPlayerTwo = new System.Windows.Forms.PictureBox();
+            this.lblPlayer1Score = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPlayer2Score = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
-            this.lblWin = new System.Windows.Forms.Label();
-            this.lblPlayer1Score = new System.Windows.Forms.Label();
-            this.lblRounds = new System.Windows.Forms.Label();
-            this.lblRoundCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxPlayerOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxPlayerTwo)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +45,6 @@
             // 
             this.lblPlayerOne.AutoSize = true;
             this.lblPlayerOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblPlayerOne.Location = new System.Drawing.Point(13, 13);
             this.lblPlayerOne.Name = "lblPlayerOne";
             this.lblPlayerOne.Size = new System.Drawing.Size(149, 31);
@@ -59,8 +55,7 @@
             // 
             this.lblPlayerTwo.AutoSize = true;
             this.lblPlayerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerTwo.ForeColor = System.Drawing.Color.Red;
-            this.lblPlayerTwo.Location = new System.Drawing.Point(329, 13);
+            this.lblPlayerTwo.Location = new System.Drawing.Point(329, 9);
             this.lblPlayerTwo.Name = "lblPlayerTwo";
             this.lblPlayerTwo.Size = new System.Drawing.Size(150, 31);
             this.lblPlayerTwo.TabIndex = 1;
@@ -82,11 +77,20 @@
             this.pcBoxPlayerTwo.TabIndex = 3;
             this.pcBoxPlayerTwo.TabStop = false;
             // 
+            // lblPlayer1Score
+            // 
+            this.lblPlayer1Score.AutoSize = true;
+            this.lblPlayer1Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer1Score.Location = new System.Drawing.Point(56, 230);
+            this.lblPlayer1Score.Name = "lblPlayer1Score";
+            this.lblPlayer1Score.Size = new System.Drawing.Size(0, 54);
+            this.lblPlayer1Score.TabIndex = 4;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(7, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 25);
@@ -97,7 +101,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(324, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 25);
@@ -123,56 +127,11 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // lblWin
-            // 
-            this.lblWin.AutoSize = true;
-            this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWin.ForeColor = System.Drawing.Color.Navy;
-            this.lblWin.Location = new System.Drawing.Point(167, 89);
-            this.lblWin.Name = "lblWin";
-            this.lblWin.Size = new System.Drawing.Size(156, 48);
-            this.lblWin.TabIndex = 9;
-            this.lblWin.Text = "Player One Wins \r\n     the Round";
-            // 
-            // lblPlayer1Score
-            // 
-            this.lblPlayer1Score.AutoSize = true;
-            this.lblPlayer1Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer1Score.Location = new System.Drawing.Point(56, 230);
-            this.lblPlayer1Score.Name = "lblPlayer1Score";
-            this.lblPlayer1Score.Size = new System.Drawing.Size(0, 54);
-            this.lblPlayer1Score.TabIndex = 4;
-            // 
-            // lblRounds
-            // 
-            this.lblRounds.AutoSize = true;
-            this.lblRounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRounds.Location = new System.Drawing.Point(206, 19);
-            this.lblRounds.Name = "lblRounds";
-            this.lblRounds.Size = new System.Drawing.Size(79, 25);
-            this.lblRounds.TabIndex = 10;
-            this.lblRounds.Text = "Rounds";
-            // 
-            // lblRoundCount
-            // 
-            this.lblRoundCount.AutoSize = true;
-            this.lblRoundCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoundCount.ForeColor = System.Drawing.Color.Black;
-            this.lblRoundCount.Location = new System.Drawing.Point(222, 44);
-            this.lblRoundCount.Name = "lblRoundCount";
-            this.lblRoundCount.Size = new System.Drawing.Size(43, 25);
-            this.lblRoundCount.TabIndex = 11;
-            this.lblRoundCount.Text = "0/5";
-            // 
             // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(491, 377);
-            this.Controls.Add(this.lblRoundCount);
-            this.Controls.Add(this.lblRounds);
-            this.Controls.Add(this.lblWin);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblPlayer2Score);
             this.Controls.Add(this.label3);
@@ -197,13 +156,10 @@
         private System.Windows.Forms.Label lblPlayerTwo;
         private System.Windows.Forms.PictureBox pcboxPlayerOne;
         private System.Windows.Forms.PictureBox pcBoxPlayerTwo;
+        private System.Windows.Forms.Label lblPlayer1Score;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPlayer2Score;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Label lblWin;
-        private System.Windows.Forms.Label lblPlayer1Score;
-        private System.Windows.Forms.Label lblRounds;
-        private System.Windows.Forms.Label lblRoundCount;
     }
 }

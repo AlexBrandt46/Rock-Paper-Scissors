@@ -14,7 +14,7 @@ namespace Rock_Paper_Scissors
     public partial class PlayerChoice : Form
     {
 
-        private Player current; //the current player in this instance of PlayerChoice
+        private Player current;
 
         public PlayerChoice(Player player)
         {

@@ -31,10 +31,13 @@ namespace Rock_Paper_Scissors
 
         }
 
-        //Purpose: return the player's number
+        //Purpose: get and set the player's number
         public int PlayerNumber {
             get {
                 return playerNumber;
+            }
+            set {
+                playerNumber = value;
             }
         }
 
@@ -64,11 +67,15 @@ namespace Rock_Paper_Scissors
             }
         }
 
-        //Purpose: returns whether or not the player object is the computer
+        //Purpose: gets and sets whether or not the player object is the computer
         public bool IsComputer {
             get {
                 return isComputer;
             }
+            set {
+                isComputer = value;
+            }
         }
+
     }
 }

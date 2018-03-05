@@ -40,5 +40,22 @@ namespace Rock_Paper_Scissors
         {
 
         }
+
+        private void btnNew_Click(object sender, EventArgs e) { 
+
+            PlayerVariables.Reset();
+
+            PlayerVariables.mainForm.Show();
+
+            this.Close();
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+            PlayerVariables.mainForm.Close();
+
+        }
     }
 }

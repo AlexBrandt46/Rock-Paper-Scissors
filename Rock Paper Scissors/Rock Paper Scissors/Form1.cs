@@ -16,6 +16,8 @@ namespace Rock_Paper_Scissors
         public frmLaunch()
         {
             InitializeComponent();
+
+            PlayerVariables.mainForm = this;
         }
 
         //Purpose: confirms whether or not the user would like to close the application
@@ -44,9 +46,11 @@ namespace Rock_Paper_Scissors
 
             PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
 
-            this.Hide();
+            btn3Games.Checked = true;
 
             playerChoice.Show();
+
+            this.Close();
 
         }
 
@@ -59,9 +63,11 @@ namespace Rock_Paper_Scissors
 
             PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
 
-            this.Hide();
+            btn3Games.Checked = true;
 
             playerChoice.Show();
+
+            this.Hide();
 
         }
 

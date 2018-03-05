@@ -104,21 +104,23 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(78, 230);
+            this.btnNew.Location = new System.Drawing.Point(235, 219);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(99, 45);
             this.btnNew.TabIndex = 6;
-            this.btnNew.Text = "button1";
+            this.btnNew.Text = "New Game";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(237, 230);
+            this.btnExit.Location = new System.Drawing.Point(54, 219);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(99, 45);
             this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "button2";
+            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // WinPage
             // 

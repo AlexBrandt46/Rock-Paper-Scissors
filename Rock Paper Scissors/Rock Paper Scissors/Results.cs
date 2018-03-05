@@ -104,8 +104,8 @@ namespace Rock_Paper_Scissors
             }
 
             //sets text of scoreboard
-            lblPlayer1Score.Text = PlayerVariables.playerOneScore.ToString();
-            lblPlayer2Score.Text = PlayerVariables.playerTwoScore.ToString();
+            lblPlayer1Score.Text = PlayerVariables.playerOne.Score.ToString();
+            lblPlayer2Score.Text = PlayerVariables.playerTwo.Score.ToString();
 
             lblRoundCount.Text = PlayerVariables.currentRound.ToString() + "/" + PlayerVariables.rounds.ToString();
 

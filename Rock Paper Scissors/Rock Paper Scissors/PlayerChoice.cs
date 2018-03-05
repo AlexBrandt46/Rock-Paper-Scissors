@@ -67,7 +67,7 @@ namespace Rock_Paper_Scissors
 
                 this.Close(); //closes the player choice window for the current player
 
-                if ((Convert.ToDouble(PlayerVariables.playerOneScore)) / PlayerVariables.rounds > .5 || (Convert.ToDouble(PlayerVariables.playerTwoScore)) / PlayerVariables.rounds > .5)
+                if ((Convert.ToDouble(PlayerVariables.playerOne.Score)) / PlayerVariables.rounds > .5 || (Convert.ToDouble(PlayerVariables.playerTwo.Score)) / PlayerVariables.rounds > .5)
                 {
 
                     WinPage win = new WinPage();

@@ -17,6 +17,28 @@ namespace Rock_Paper_Scissors
 
             InitializeComponent();
 
+            lblPlayer1Score.Text = PlayerVariables.playerOne.Score.ToString();
+            lblPlayer2Score.Text = PlayerVariables.playerTwo.Score.ToString();
+
+            if (PlayerVariables.playerOne.Winner)
+            {
+
+                lblWinner.Text = "Player One Wins!";
+                lblWinner.ForeColor = Color.FromArgb(0, 64, 0); //changes font color to match  results page
+
+            }
+            else
+            {
+                lblWinner.Text = "Player Two Wins!";
+                lblWinner.ForeColor = Color.Red;
+
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

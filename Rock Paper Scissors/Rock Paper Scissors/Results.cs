@@ -90,7 +90,7 @@ namespace Rock_Paper_Scissors
             if (PlayerVariables.playerOne.Winner)
             {
                 lblWin.Text = "Player One Wins";
-                PlayerVariables.playerOneScore++; //increments player 1's score by 1
+                PlayerVariables.playerOne.Score++; //increments player 1's score by 1
             }
             else if (PlayerVariables.playerOne.Winner == PlayerVariables.playerTwo.Winner) //checks if there's a tie
             {
@@ -100,7 +100,7 @@ namespace Rock_Paper_Scissors
             else
             {
                 lblWin.Text = "Player Two Wins";
-                PlayerVariables.playerTwoScore++; //increments player 2's score by 1
+                PlayerVariables.playerTwo.Score++; //increments player 2's score by 1
             }
 
             //sets text of scoreboard

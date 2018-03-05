@@ -10,6 +10,7 @@ namespace Rock_Paper_Scissors
     {
 
         private int playerNumber; //determines whether player is Player 1 or Player 2
+        private int score; //the player's current score
         private bool winner; //whether or not the player is the winner of the round
         private bool isComputer; //whether or not this instance of player is computer
 
@@ -24,6 +25,7 @@ namespace Rock_Paper_Scissors
         {
 
             playerNumber = num;
+            score = 0;
             winner = false;
             isComputer = computer;
 
@@ -36,12 +38,23 @@ namespace Rock_Paper_Scissors
             }
         }
 
+        //Purpose: gets and sets the player object's score
+        public int Score {
+            get {
+                return score;
+            }
+            set {
+                score = value;
+            }
+        }
+
         //Purpose: gets and sets the player's choice
         public Choice PlayerChoice {
             get;
             set;
         }
 
+        //Purpose: gets and sets whether or not the player object is the winner of the round
         public bool Winner {
             get {
                 return winner;
@@ -51,6 +64,7 @@ namespace Rock_Paper_Scissors
             }
         }
 
+        //Purpose: returns whether or not the player object is the computer
         public bool IsComputer {
             get {
                 return isComputer;

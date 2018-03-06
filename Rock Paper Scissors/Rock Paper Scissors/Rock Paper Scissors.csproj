@@ -87,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Results.resx">
       <DependentUpon>Results.cs</DependentUpon>
@@ -106,6 +107,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scissors.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

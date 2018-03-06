@@ -30,7 +30,7 @@
         {
             this.lblPlayerOne = new System.Windows.Forms.Label();
             this.lblPlayerTwo = new System.Windows.Forms.Label();
-            this.pcboxPlayerOne = new System.Windows.Forms.PictureBox();
+            this.pcBoxPlayerOne = new System.Windows.Forms.PictureBox();
             this.pcBoxPlayerTwo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.lblPlayer1Score = new System.Windows.Forms.Label();
             this.lblRounds = new System.Windows.Forms.Label();
             this.lblRoundCount = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxPlayerOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcBoxPlayerOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxPlayerTwo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,19 +66,21 @@
             this.lblPlayerTwo.TabIndex = 1;
             this.lblPlayerTwo.Text = "Player Two";
             // 
-            // pcboxPlayerOne
+            // pcBoxPlayerOne
             // 
-            this.pcboxPlayerOne.Location = new System.Drawing.Point(13, 61);
-            this.pcboxPlayerOne.Name = "pcboxPlayerOne";
-            this.pcboxPlayerOne.Size = new System.Drawing.Size(150, 125);
-            this.pcboxPlayerOne.TabIndex = 2;
-            this.pcboxPlayerOne.TabStop = false;
+            this.pcBoxPlayerOne.Location = new System.Drawing.Point(13, 61);
+            this.pcBoxPlayerOne.Name = "pcBoxPlayerOne";
+            this.pcBoxPlayerOne.Size = new System.Drawing.Size(150, 125);
+            this.pcBoxPlayerOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcBoxPlayerOne.TabIndex = 2;
+            this.pcBoxPlayerOne.TabStop = false;
             // 
             // pcBoxPlayerTwo
             // 
             this.pcBoxPlayerTwo.Location = new System.Drawing.Point(329, 61);
             this.pcBoxPlayerTwo.Name = "pcBoxPlayerTwo";
             this.pcBoxPlayerTwo.Size = new System.Drawing.Size(150, 125);
+            this.pcBoxPlayerTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcBoxPlayerTwo.TabIndex = 3;
             this.pcBoxPlayerTwo.TabStop = false;
             // 
@@ -128,11 +130,15 @@
             this.lblWin.AutoSize = true;
             this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWin.ForeColor = System.Drawing.Color.Navy;
-            this.lblWin.Location = new System.Drawing.Point(167, 89);
+            this.lblWin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblWin.Location = new System.Drawing.Point(168, 90);
             this.lblWin.Name = "lblWin";
+            this.lblWin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblWin.Size = new System.Drawing.Size(156, 48);
             this.lblWin.TabIndex = 9;
-            this.lblWin.Text = "Player One Wins \r\n     the Round";
+            this.lblWin.Text = "Player One Wins \r\nthe Round";
+            this.lblWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWin.UseMnemonic = false;
             // 
             // lblPlayer1Score
             // 
@@ -179,12 +185,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPlayer1Score);
             this.Controls.Add(this.pcBoxPlayerTwo);
-            this.Controls.Add(this.pcboxPlayerOne);
+            this.Controls.Add(this.pcBoxPlayerOne);
             this.Controls.Add(this.lblPlayerTwo);
             this.Controls.Add(this.lblPlayerOne);
             this.Name = "Results";
             this.Text = "Results";
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxPlayerOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcBoxPlayerOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxPlayerTwo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,7 +201,7 @@
 
         private System.Windows.Forms.Label lblPlayerOne;
         private System.Windows.Forms.Label lblPlayerTwo;
-        private System.Windows.Forms.PictureBox pcboxPlayerOne;
+        private System.Windows.Forms.PictureBox pcBoxPlayerOne;
         private System.Windows.Forms.PictureBox pcBoxPlayerTwo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

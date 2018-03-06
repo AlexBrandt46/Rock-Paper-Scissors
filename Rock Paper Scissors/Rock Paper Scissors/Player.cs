@@ -77,5 +77,23 @@ namespace Rock_Paper_Scissors
             }
         }
 
+        //Purpose: displays the player's choice as a string
+        public string ToString()
+        {
+            if (this.PlayerChoice == Choice.ROCK)
+            {
+                return "rock";
+            }
+            else if (this.PlayerChoice == Choice.PAPER)
+            {
+                return "paper";
+            }
+            else
+            {
+                return "scissors";
+            }
+
+        }
+
     }
 }

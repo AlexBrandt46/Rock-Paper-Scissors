@@ -12,13 +12,19 @@ namespace Rock_Paper_Scissors
 {
     public partial class Results : Form
     {
+
+        //Purpose: displays the results of the round and determines who won
         public Results()
         {
 
-            InitializeComponent(); 
+            InitializeComponent();
+
+            pcBoxPlayerOne.Image = (Image)(Properties.Resources.ResourceManager.GetObject(PlayerVariables.playerOne.ToString())); //assigns player 1's choice to the designated picture box
+            pcBoxPlayerTwo.Image = (Image)(Properties.Resources.ResourceManager.GetObject(PlayerVariables.playerTwo.ToString())); //assigns player 2's choice to the designated picture box
 
         }
 
+        //Purpose: displays a new window for the player to make their choice, and starts the next round
         private void btnNext_Click(object sender, EventArgs e)
         {
 
@@ -39,6 +45,7 @@ namespace Rock_Paper_Scissors
             PlayerVariables.playerOne.Winner = false;
             PlayerVariables.playerTwo.Winner = false;
 
+            //checks the results of each player's choice
             if (PlayerVariables.playerOne.PlayerChoice == Player.Choice.PAPER)
             {
                 if (PlayerVariables.playerTwo.PlayerChoice == Player.Choice.ROCK)
@@ -87,7 +94,7 @@ namespace Rock_Paper_Scissors
         private void UpdateScoreboard()
         {
 
-            if (PlayerVariables.playerOne.Winner)
+            if (PlayerVariables.playerOne.Winner) //if player 1 wins the match
             {
                 lblWin.Text = "Player One Wins";
                 PlayerVariables.playerOne.Score++; //increments player 1's score by 1
@@ -95,9 +102,10 @@ namespace Rock_Paper_Scissors
             else if (PlayerVariables.playerOne.Winner == PlayerVariables.playerTwo.Winner) //checks if there's a tie
             {
                 lblWin.Text = "Tie";
+                lblWin.Left = 227;
                 PlayerVariables.currentRound--;
             }
-            else
+            else       //if player 2 wins         
             {
                 lblWin.Text = "Player Two Wins";
                 PlayerVariables.playerTwo.Score++; //increments player 2's score by 1

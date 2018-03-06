@@ -13,6 +13,7 @@ namespace Rock_Paper_Scissors
     public partial class frmLaunch : Form
     {
 
+        //Purpose: creates a window to select how many games to play, and whether it's single-player or two-player
         public frmLaunch()
         {
             InitializeComponent();
@@ -37,11 +38,12 @@ namespace Rock_Paper_Scissors
 
         }
 
+        //Purpose: creates a single player game against a computer if clicked
         private void btnSinglePlayer_Click(object sender, EventArgs e) {
 
             SetRounds();
 
-            PlayerVariables.playerOne = new Player(1, false);
+            PlayerVariables.playerOne = new Player(1, false); //the player controlled by the user
             PlayerVariables.playerTwo = new Player(2, true); //creates the computer to play against
 
             PlayerChoice playerChoice = new PlayerChoice(PlayerVariables.playerOne);
@@ -50,10 +52,11 @@ namespace Rock_Paper_Scissors
 
             playerChoice.Show();
 
-            this.Close();
+            this.Hide();
 
         }
 
+        //Purpose: creates a two player game
         private void btnTwoPlayer_Click(object sender, EventArgs e) {
 
             SetRounds();
@@ -71,6 +74,7 @@ namespace Rock_Paper_Scissors
 
         }
 
+        //Purpose: sets the maximum amount of rounds that can be played and have the score change (if there's a tie, then the score won't change)
         private void SetRounds() {
             if (btn7Games.Checked)
             {
